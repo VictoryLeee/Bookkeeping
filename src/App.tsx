@@ -1,17 +1,16 @@
 import React from 'react'
-import { Button } from 'antd'
-import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import MainLayout from './components/mainLayout/MainLayout'
+import { Provider } from './components/provider/Provider';
 
 function App() {
   return (
-    <div className="app">
-      <Button type="primary">Book Keeping</Button>
-      <svg>
-        {/* 指定 id 即可 */}
-        <use xlinkHref="#icon-salary" />
-      </svg>
-    </div>
-  )
+    <Provider>
+    <BrowserRouter>
+      <MainLayout />
+    </BrowserRouter>
+    </Provider>
+  );
 }
 
 export default App
